@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/tableStyle.css">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".button1").click(function(){
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                });
+            });
+
+            $(document).ready(function(){
+                $(".logo").animate({left:'250px'});
+            });
+        </script>
+    </head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="./New Project/logo.png" class="logo">
+            <ul>
+                <a href="./ProductList.html">
+                    <li class="page">ProductList</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Login</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Profile</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Cart</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <table class="table1">
+        <tr>
+            <td><img src="./New Project/1.jpg" /></td>
+            <td><p style="color:black; font-size: 40px;">Canon EOS Rebel T8i DSLR Camera with 18-55mm IS STM Lens Kit</p><br />
+                <p style="color:red; font-size: 70px;">$ 1400</p><br />
+                <button class="button1" style="color:black; font-size: 30px; background-color: coral;">Add to Cart</button></td>
+        </tr>
+    </table>
+    <div class="div1" style="display:none;"><p style="color:black; font-size: 80px;">Successfully added to the cart</p></div>
+    <table class="mainTable">
+        <tr>
+            <th>Included Lens</th>
+            <th></th>
+            <th>Body Features</th>
+            <th></th>
+            <th>Power</th>
+        </tr>
+        <tr>
+            <td>Lens Frame Colour</td>
+            <td>Black</td>
+            <td>Stabilized Body</td>
+            <td>No</td>
+            <td>Battery Type</td>
+            <td>Lithium-ion</td>
+        </tr>
+        <tr>
+            <td>Lens Range</td>
+            <td>18-55</td>
+            <td>Body Colour</td>
+            <td>Black</td>
+            <td>Included Battery Model</td>
+            <td>Battery Pack LP-E17</td>
+        </tr>
+        <tr>
+            <td>Stabilized</td>
+            <td>Yes</td>
+            <td>Weather Sealed</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Model Number</td>
+            <td>1620C002</td>
+        </tr>
+        <tr>
+            <td>Filter Size</td>
+            <td>2.3 in. / 58mm diameter</td>
+        </tr>
+        <tr>
+            <td>Lens Weight</td>
+            <td>215 g</td>
+        </tr>
+    </table>
+</body>
+</html>

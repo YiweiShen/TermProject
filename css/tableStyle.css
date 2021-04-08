@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Slab', serif;
+}
+
+header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+nav {
+	background-color: rgb(56, 56, 56);
+}
+
+nav ul a {
+	text-decoration: none;
+}
+
+nav img {
+	display: inline-block;
+	width: 100px;
+	height: auto;
+	margin: auto 0 auto 5%;
+}
+
+nav ul {
+	position: absolute;
+	top: 20px;
+	left: 60%;
+	display: flex;
+	width: auto;
+	height: auto;
+}
+
+nav ul li {
+	list-style: none;
+	padding: 10px;
+	margin-left: 20px;
+	color: white;
+	font-weight: 400;
+}
+
+.page:hover{
+    transition-duration: 0.2s;
+    border-bottom: 2px solid #a65110;
+}
+
+.table1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
+.table1 img {
+	height: 450px;
+	width: 700px;
+}
+
+.footer tr td {
+	max-width: 250px;
+}
+
+.footer table tr td img {
+    height: 30px;
+}
+
+.footer {
+	color: black;
+	left: 0;
+	position: relative;
+	height: auto;
+	width: 100%;
+	background: linear-gradient(white, #1034a6);
+	display: flex;
+	justify-content: space-around;
+}
+
+@import "compass/css3";
+.mainTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin: 1em 0;
+	min-width: 300px;
+}
+
+.mainTable tr {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.mainTable th {
+	display: none;
+}
+
+.mainTable td {
+	border-bottom: 2px solid red;
+	display: block;
+}
+
+.mainTable td:first-child {
+	padding-top: 0.5em;
+}
+
+.mainTable td:last-child {
+	padding-bottom: 0.5em;
+}
+
+.mainTable td:before {
+	content: attr(data-th) ": ";
+	font-weight: bold;
+	width: 6.5em;
+	display: inline-block;
+}
+
+@media (min-width: 480px) {
+	.mainTable td:before {
+		display: none;
+	}
+}
+
+.mainTable th, .mainTable td {
+	text-align: left;
+}
+
+@media (min-width: 600px) {
+	.mainTable th, .mainTable td {
+		display: table-cell;
+		padding: 0.25em 0.5em;
+	}
+	.mainTable th:first-child, .mainTable td:first-child {
+		padding-left: 0;
+	}
+	.mainTable th:last-child, .mainTable td:last-child {
+		padding-right: 0;
+	}
+}
+
+body {
+	padding: 0 2em;
+	color: #444;
+	background: #eee;
+}
+
+body table tr td img {
+	width: 200px;
+	height: 150px;
+	border-radius: 5%;
+	/* margin: 0 auto 0 auto; */
+	/* justify-content: center; */
+}
+
+.mainTable {
+	/* padding: 0 2em; */
+	position: relative;
+	top: 100px;
+	background: #34495e;
+	color: #fff;
+	border-radius: 0.4em;
+	overflow: hidden;
+}
+
+.mainTable tr {
+	border-color: #46637f;
+}
+
+.mainTable td{
+	justify-items: center;
+}
+
+.mainTable th, .mainTable td {
+	margin: 0.5em 1em;
+}
+
+@media (min-width: 600px) {
+	.mainTable th, .mainTable td {
+		padding: 1em !important;
+	}
+}
+
+.mainTable th, .mainTable td:before {
+	color: #dd5;
+}

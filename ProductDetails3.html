@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/tableStyle.css">
+        <link rel="stylesheet" href="style-nav.css" type="text/css">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".button1").click(function(){
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                });
+            });
+        </script>
+    </head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="./New Project/logo.png" class="logo">
+            <ul>
+                <a href="./ProductList.html">
+                    <li class="page">ProductList</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Login</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Profile</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Cart</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <table class="table1">
+        <tr>
+            <td><img src="./New Project/6.jpg" /></td>
+            <td><p style="color:black; font-size: 40px;">Apple iPhone SE 64GB</p><br />
+                <p style="color:red; font-size: 70px;">$ 599</p><br />
+                <button class="button1" style="color:black; font-size: 30px; background-color: coral;">Add to Cart</button></td>
+        </tr>
+    </table>
+    <div class="div1" style="display:none;"><p style="color:black; font-size: 80px;">Successfully added to the cart</p></div>
+    <table class="mainTable">
+        <tr>
+            <th>Base Features</th>
+            <th></th>
+            <th>Connectivity</th>
+            <th></th>
+            <th>Camera</th>
+        </tr>
+        <tr>
+            <td>Bluetooth</td>
+            <td>Bluetooth 5.0</td>
+            <td>Wi-Fi</td>
+            <td>802.11ax Wi‑Fi 6 with 2x2 MIMO</td>
+            <td>Front-Facing Camera Resolution</td>
+            <td>7MP f/2.2 with Portrait mode</td>
+        </tr>
+        <tr>
+            <td>Dual SIM Card</td>
+            <td>Yes</td>
+            <td>NFC</td>
+            <td>Yes</td>
+            <td>Rear Camera Resolution</td>
+            <td>12MP wide camera f/1.8 with Portrait mode, 5x digital zoom, flash</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>64 GB</td>
+            <td>Wireless Charging</td>
+            <td>Yes</td>
+            <td>Front Video Capture Resolution</td>
+            <td>1080p HD video recording at 30fps</td>
+        </tr>
+        <tr>
+            <td>Memory - Expansion</td>
+            <td>No</td>
+            <td>Cable Connection Type</td>
+            <td>Lightning Connector</td>
+            <td>Rear Video Capture Resolution</td>
+            <td>4K video recording at 24fps, 30fps, or 60fps</td>
+        </tr>
+        <tr>
+            <td>CPU</td>
+            <td>A13 Bionic chip</td>
+            <td>Headphone Jack</td>
+            <td>No</td>
+            <td>Camera Flash</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Phone Operating System</td>
+            <td>iOS 13</td>
+            <td></td>
+            <td></td>
+            <td>Other Camera Features</td>
+            <td>Panorama mode, Sapphire crystal lens cover, Smart HDR, Advanced red-eye correction, Burst mode, Photo geotagging</td>
+        </tr>
+        <tr>
+            <td>Battery Type</td>
+            <td>Lithium-ion</td>
+        </tr>
+    </table>
+</body>
+</html>

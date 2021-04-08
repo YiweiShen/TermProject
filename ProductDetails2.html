@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/tableStyle.css">
+        <link rel="stylesheet" href="style-nav.css" type="text/css">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".button1").click(function(){
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                    $(".div1").animate({
+                        height:'toggle'
+                    },"slow");
+                });
+            });
+        </script>
+    </head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="./New Project/logo.png" class="logo">
+            <ul>
+                <a href="./ProductList.html">
+                    <li class="page">ProductList</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Login</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Profile</li>
+                </a>
+                <a href="./ProductList.html">
+                    <li class="page">Cart</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <table class="table1">
+        <tr>
+            <td><img src="./New Project/4.jpg" /></td>
+            <td><p style="color:black; font-size: 40px;">Apple MacBook Air 13.3" w/ Touch ID (Fall 2020) - Silver</p><br />
+                <p style="color:red; font-size: 70px;">$ 1299</p><br />
+                <button class="button1" style="color:black; font-size: 30px; background-color: coral;">Add to Cart</button></td>
+        </tr>
+    </table>
+    <div class="div1" style="display:none;"><p style="color:black; font-size: 80px;">Successfully added to the cart</p></div>
+    <table class="mainTable">
+        <tr>
+            <th>Display</th>
+            <th></th>
+            <th>Processor</th>
+            <th></th>
+            <th>Storage & Memory</th>
+        </tr>
+        <tr>
+            <td>Year of Original Release</td>
+            <td>2020</td>
+            <td>Processor Type</td>
+            <td>Apple M1</td>
+            <td>Solid-State Drive Capacity</td>
+            <td>256 GB</td>
+        </tr>
+        <tr>
+            <td>Native Screen Resolution</td>
+            <td>2560 x 1600</td>
+        </tr>
+        <tr>
+            <td>Touchscreen Display</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Convertible/Hybrid Display</td>
+            <td>No</td>
+        </tr>
+    </table>
+</body>
+</html>
