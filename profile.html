@@ -1,0 +1,177 @@
+<!-- Term project - Group 8 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles_profile.css">
+    <title>Profile</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/scripts_profile.js"></script>
+</head>
+<body>
+    <!-- website nav bar with search bar on the right, logo on the left -->
+    <nav>
+        
+    </nav>
+
+    <div class="account-wrap">
+        <!-- Display user's information -->
+        <h2>Profile</h2>
+        <h3>Account Information</h3>
+
+        <!-- An edit button is included for each line for allowing user to update their information -->
+        <!-- User's Avatar -->
+        <div id="account-avatar" class="row-wrap">
+            <div class="thumb">
+                <label class="account-label">Avatar: </label>
+                <img src="./img/avatar_sample.jpg" alt="Account Avatar" width="100">
+                <div class="account-edit-input" id="edit-avatar">
+                    <input type="file" name="fileToUpload", accept="image/*">
+                    <button class="submit-button" id="submit-button-avatar">Submit</button>
+                </div>
+            </div>
+            <button class="edit-button" id="edit-button-avatar">Edit</button>
+        </div>
+
+        <hr>
+        <!-- User's name -->
+        <div id="account-name" class="row-wrap">
+            <label class="account-label">Name: </label>
+            <label class="account-label" id="account-label-name">David Williams</label>
+            <div class="account-edit-input" id="edit-name">
+                <p><strong>Note:</strong>Please enter your full name.</p>
+                <input type="text" name="updated-name" required>
+                <button class="submit-button" id="submit-button-name">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-name">Edit</button>
+        </div>
+        
+        <hr>
+        <!-- User's nickname for the website -->
+        <div id="account-nickname" class="row-wrap">
+            <label class="account-label">Nick name: </label>
+            <label class="account-label" id="account-label-nickname">DW</label>
+            <div class="account-edit-input" id="edit-nickname">
+                <p><strong>Note:</strong>Please enter your nickname for the website.</p>
+                <input type="text" name="updated-nickname" required>
+                <button class="submit-button" id="submit-button-nickname">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-nickname">Edit</button>
+        </div>
+
+        <hr>
+        <!-- User's gender -->
+        <div id="account-gender" class="row-wrap">
+            <label class="account-label">Gender: </label>
+            <label class="account-label" id="account-label-gender">Male</label>
+            <div class="account-edit-input" id="edit-gender">
+                <p><strong>Note:</strong>Please choose your gender.</p>
+                <label for="">Male</label><input type="radio" name="gender" value="male">
+                <label for="">Female</label><input type="radio" name="gender" value="female">
+                <button class="submit-button" id="submit-button-gender">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-gender">Edit</button>
+        </div>
+
+        <hr>
+        <!-- User's birthday -->
+        <div id="account-birthday" class="row-wrap">
+            <label class="account-label">Birthday: </label>
+            <label class="account-label" id="account-label-birthday">2000-01-01</label>
+            <div class="account-edit-input" id="edit-birthday">
+                <label for="birthday">Update your birthday: </label><input type="date" name="birthday" required>
+                <button class="submit-button" id="submit-button-birthday">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-birthday">Edit</button>
+        </div>
+
+        <hr>
+        <!-- User's email address -->
+        <div id="account-email" class="row-wrap">
+            <label class="account-label">Email Address: </label>
+            <label class="account-label" id="account-label-email">David@somewhere.com</label>
+            <div class="account-edit-input" id="edit-email">
+                <label for="email">Update your email: </label>
+                <input type="email" name="email" required>
+                <button class="submit-button" id="submit-button-email">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-email">Edit</button>
+        </div>
+        
+        <hr>
+        <!-- User's mobile phone number -->
+        <div id="account-mobile" class="row-wrap">
+            <label class="account-label">Mobile: </label>
+            <label class="account-label" id="account-label-mobile">1234567890</label>
+            <div class="account-edit-input" id="edit-mobile">
+                <label for="tel">Update your mobile number: </label>
+                <input type="tel" name="tel" required>
+                <button class="submit-button" id="submit-button-mobile">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-mobile">Edit</button>
+        </div>
+        
+        <hr>
+        <!-- User's password of the account -->
+        <div id="account-password" class="row-wrap">
+            <label class="account-label">Password: </label>
+            <label class="account-label" id="account-label-password">Password123456</label>
+            <div class="account-edit-input" id="edit-password">
+                <label for="password">Update your password: </label>
+                <input type="password" id="password-input" required>
+                <button class="submit-button" id="submit-button-password">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-password">Edit</button>
+        </div>
+        
+        <hr>
+        <!-- User's twitter account name -->
+        <div id="account-twitter" class="row-wrap">
+            <label class="account-label">Twitter: </label>
+            <label class="account-label" id="account-label-twitter">@David_W</label>
+            <div class="account-edit-input" id="edit-twitter">
+                <label for="twitter">Update your twitter account: @</label>
+                <input type="text" name="twitter" required>
+                <button class="submit-button" id="submit-button-twitter">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-twitter">Edit</button>
+        </div>
+        
+        <hr>
+        <!-- User's address -->
+        <div id="account-address" class="row-wrap">
+            <label class="account-label">Address: </label>
+            <label class="account-label" id="account-label-address">Somewhere, Toronto, Ontario, Canada</label>
+            <div class="account-edit-input" id="edit-address">
+                <label for="address">Update your twitter address: </label>
+                <input type="text" name="address" required>
+                <button class="submit-button" id="submit-button-address">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-address">Edit</button>
+        </div>
+
+        <hr>
+        <!-- User's privacy choice if the profile can be viewed by others -->
+        <div id="account-privacy-choice" class="row-wrap">
+            <label class="account-label">Privacy choice: </label>
+            <label class="account-label" id="account-label-privacy-choice">Can be viewed by others.</label>
+            <div class="account-edit-input" id="edit-privacy-choice">
+                <input type="radio" name="if-can-be-viewed" value="can">Can be viewed by others.<br>
+                <input type="radio" name="if-can-be-viewed" value="cannot">Hidden from others.<br>  
+                <p><strong>Note:</strong>Please choose your privacy choice for your profile.</p>
+                <button class="submit-button" id="submit-button-privacy-choice">Submit</button>
+            </div>
+            <button class="edit-button" id="edit-button-privacy-choice">Edit</button>
+        </div>
+    </div>
+
+    <!-- website footer with contact information etc. -->
+    <footer>
+        
+    </footer>
+
+</body>
+</html>
