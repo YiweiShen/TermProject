@@ -4,7 +4,7 @@ body
 	padding: 0;
 	font-family: sans-serif;
 	background: url(college.png);
-	background-image: url("../img/background_register.jpg");
+	background-image: url("../images/background_register.jpg");
 	background-s;
 }
 .container
@@ -25,7 +25,7 @@ body
 	text-align: center;
 	margin: 0 0 40px;
 	padding: 0;
-	color: rgb(66,133,244);
+	color: rgb(66, 244, 161);
 	letter-spacing: 2px;
 }
 .container input
@@ -41,11 +41,11 @@ body
 }
 .container input[type="submit"]
 {
-	border-radius: 25px;
+	border-radius: 15px;
 	font-size: 20px;
 	height: 40px;
 	cursor : pointer;
-	background: rgb(66,133,244);
+	background: rgb(66, 244, 161);
 	color: #fff;
 	margin-bottom: 0;
 }
