@@ -1,1 +1,14 @@
 /* Term project - Group 8 */
+
+.account-wrap {
+	margin-top: 150px;
+	margin-bottom: 100px;
+	margin-right: auto;
+	margin-left: auto;
+    text-align: center;
+}
+
+nav {
+	top: 0;
+	position: fixed;
+}

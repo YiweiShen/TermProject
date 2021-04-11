@@ -157,6 +157,7 @@ button:focus{
     HEADER
 -------------------------------------------------------------------*/
 .top-navbar{
+    background-color: whitesmoke;
 	position: relative;
 	z-index: 10;
 }
@@ -175,7 +176,7 @@ button:focus{
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
-	color: #010101;
+	color: whitesmoke;
 	font-size: 16px;
 	padding: 10px 20px;
 	border-radius: 4px;
@@ -183,12 +184,12 @@ button:focus{
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
-	background: #d65106;
-	color: #ffffff;
+	background: orange;
+	color: whitesmoke;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
-	background: #d65106;
-	color: #ffffff;
+	background: orange;
+	color: whitesmoke;
 	border-radius: 4px;
 }
 
@@ -204,11 +205,11 @@ button:focus{
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover{
-	background: #d65106;
-	color: #ffffff;
+	background: orange;
+	color: whitesmoke;
 }
 .navbar-light .navbar-toggler:hover{
-	background: #d65106;
+	background:whitesmoke;
 }
 
 /*------------------------------------------------------------------
@@ -474,7 +475,8 @@ button:focus{
 	margin-top: 30px;
 }
 .tz-gallery .lightbox img {
-    width: 100%;
+    width: 350px;
+    height: 200px;
     transition: 0.2s ease-in-out;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }
@@ -620,7 +622,6 @@ button:focus{
 	padding-bottom: 0px;
 }
 .bg-f{
-	background-image: url("../images/footer-bg.jpg");
 	background-attachment: scroll;
 	background-clip: initial;
 	background-color: rgba(0, 0, 0, 0);
@@ -1362,29 +1363,9 @@ blockquote {
 	font-size: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nav img{
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin: auto 0 auto 5%;
+}

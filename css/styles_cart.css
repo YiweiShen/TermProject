@@ -1,1 +1,19 @@
 /* Term project - Group 8 */
+
+nav {
+	top: 0;
+	position: fixed;
+}
+
+.cart-wrap {
+	margin-top: 150px;
+	margin-bottom: 100px;
+	margin-right: auto;
+	margin-left: auto;
+    text-align: center;
+}
+
+.cart-wrap aside {
+    float: right;
+    margin-right: 10%;
+}

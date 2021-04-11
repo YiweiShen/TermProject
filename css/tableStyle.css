@@ -40,7 +40,7 @@ nav ul li {
 	list-style: none;
 	padding: 10px;
 	margin-left: 20px;
-	color: white;
+	color: black;
 	font-weight: 400;
 }
 
@@ -74,7 +74,7 @@ nav ul li {
 	position: relative;
 	height: auto;
 	width: 100%;
-	background: linear-gradient(white, #1034a6);
+	background: linear-gradient(black, #1034a6);
 	display: flex;
 	justify-content: space-around;
 }
@@ -89,8 +89,8 @@ nav ul li {
 }
 
 .mainTable tr {
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .mainTable th {
