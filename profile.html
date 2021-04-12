@@ -13,18 +13,18 @@
     <title>Profile</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/scripts_profile.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <script>
-        AOS.init();
-    </script>
+
     
 	<!-- Start header -->
 	<header class="top-navbar">
+        
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 				<div class="container">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="index_logged_in.html">
 						<img src="./images/logo_details.png" class="logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,14 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="index_logged_in.html">Home</a></li>
                         <li class="nav-item active"><a class="nav-link" href="profile.html">Profile</a></li>
-						<li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                        <li class="nav-item" id="cart_link">
+                            <a class="nav-link" href="cart.html">
+                                <i class="fa" style="font-size: x-large;">&#xf07a;</i>
+                                <span class='badge badge-warning' id='lblCartCount'> 2 </span>
+                            </a>
+                        </a></li>
                         <li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
 					</ul>
 				</div>
@@ -42,11 +47,17 @@
 		</nav>
 	</header>
 	<!-- End header -->
-
+    <!-- widget from elfsight -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
     <div class="account-wrap">
         <!-- Display user's information -->
-        <h2>Profile</h2>
-        <h3>Account Information</h3>
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <h1>Profile</h1>
+        </div>
+        <div data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1500">
+            <h3>Account Information</h3>
+        
 
         <!-- An edit button is included for each line for allowing user to update their information -->
         <!-- User's Avatar -->
@@ -68,8 +79,8 @@
             <label class="account-label">Name: </label>
             <label class="account-label" id="account-label-name">David Williams</label>
             <div class="account-edit-input" id="edit-name">
-                <p><strong>Note:</strong>Please enter your full name.</p>
-                <input type="text" name="updated-name" required>
+                <p><strong>Note:</strong> Please enter your full name.</p>
+                <input type="text" name="updated-name" id="updated-name" required>
                 <button class="submit-button" id="submit-button-name">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-name">Edit</button>
@@ -81,8 +92,8 @@
             <label class="account-label">Nick name: </label>
             <label class="account-label" id="account-label-nickname">DW</label>
             <div class="account-edit-input" id="edit-nickname">
-                <p><strong>Note:</strong>Please enter your nickname for the website.</p>
-                <input type="text" name="updated-nickname" required>
+                <p><strong>Note:</strong> Please enter your nickname for the website.</p>
+                <input type="text" name="updated-nickname" id="updated-nickname" required>
                 <button class="submit-button" id="submit-button-nickname">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-nickname">Edit</button>
@@ -94,9 +105,9 @@
             <label class="account-label">Gender: </label>
             <label class="account-label" id="account-label-gender">Male</label>
             <div class="account-edit-input" id="edit-gender">
-                <p><strong>Note:</strong>Please choose your gender.</p>
-                <label for="">Male</label><input type="radio" name="gender" value="male">
-                <label for="">Female</label><input type="radio" name="gender" value="female">
+                <p><strong>Note:</strong> Please choose your gender.</p>
+                <label for=""> Male  </label><input type="radio" name="gender" value="male">
+                <label for=""> Female  </label><input type="radio" name="gender" value="female">
                 <button class="submit-button" id="submit-button-gender">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-gender">Edit</button>
@@ -108,7 +119,7 @@
             <label class="account-label">Birthday: </label>
             <label class="account-label" id="account-label-birthday">2000-01-01</label>
             <div class="account-edit-input" id="edit-birthday">
-                <label for="birthday">Update your birthday: </label><input type="date" name="birthday" required>
+                <label for="birthday">Update your birthday: </label><input type="date" name="birthday" id="birthday" required>
                 <button class="submit-button" id="submit-button-birthday">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-birthday">Edit</button>
@@ -121,7 +132,7 @@
             <label class="account-label" id="account-label-email">David@somewhere.com</label>
             <div class="account-edit-input" id="edit-email">
                 <label for="email">Update your email: </label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
                 <button class="submit-button" id="submit-button-email">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-email">Edit</button>
@@ -134,7 +145,7 @@
             <label class="account-label" id="account-label-mobile">1234567890</label>
             <div class="account-edit-input" id="edit-mobile">
                 <label for="tel">Update your mobile number: </label>
-                <input type="tel" name="tel" required>
+                <input type="tel" name="tel" id="tel" required>
                 <button class="submit-button" id="submit-button-mobile">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-mobile">Edit</button>
@@ -147,10 +158,11 @@
             <label class="account-label" id="account-label-password">Password123456</label>
             <div class="account-edit-input" id="edit-password">
                 <label for="password">Update your password: </label>
-                <input type="password" id="password-input" required>
+                <input type="password" name="password-input" id="password-input" required>
                 <button class="submit-button" id="submit-button-password">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-password">Edit</button>
+            <button class="edit-button" id="show-hide-password">Show</button>
         </div>
         
         <hr>
@@ -160,7 +172,7 @@
             <label class="account-label" id="account-label-twitter">@David_W</label>
             <div class="account-edit-input" id="edit-twitter">
                 <label for="twitter">Update your twitter account: @</label>
-                <input type="text" name="twitter" required>
+                <input type="text" name="twitter" id="twitter" required>
                 <button class="submit-button" id="submit-button-twitter">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-twitter">Edit</button>
@@ -173,7 +185,7 @@
             <label class="account-label" id="account-label-address">Somewhere, Toronto, Ontario, Canada</label>
             <div class="account-edit-input" id="edit-address">
                 <label for="address">Update your twitter address: </label>
-                <input type="text" name="address" required>
+                <input type="text" name="address" id="address" required>
                 <button class="submit-button" id="submit-button-address">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-address">Edit</button>
@@ -185,13 +197,14 @@
             <label class="account-label">Privacy choice: </label>
             <label class="account-label" id="account-label-privacy-choice">Can be viewed by others.</label>
             <div class="account-edit-input" id="edit-privacy-choice">
-                <input type="radio" name="if-can-be-viewed" value="can">Can be viewed by others.<br>
-                <input type="radio" name="if-can-be-viewed" value="cannot">Hidden from others.<br>  
-                <p><strong>Note:</strong>Please choose your privacy choice for your profile.</p>
+                <input type="radio" name="if-can-be-viewed" value="can"> Can be viewed by others.<br>
+                <input type="radio" name="if-can-be-viewed" value="cannot"> Hidden from others.<br>  
+                <p><strong>Note:</strong> Please choose your privacy choice for your profile.</p>
                 <button class="submit-button" id="submit-button-privacy-choice">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-privacy-choice">Edit</button>
         </div>
+    </div>
     </div>
 
 	<!-- Start Footer -->
@@ -248,6 +261,12 @@
 		
 	</footer>
 	<!-- End Footer -->
-
+    <script>
+        AOS.init({
+            offset: 100,
+            delay: 50,
+            duration: 300
+        });
+    </script>
 </body>
 </html>

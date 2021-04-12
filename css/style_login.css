@@ -43,7 +43,7 @@ nav {
 	color: #130f40;
 }
 .login_form{
-	padding: 20px 40px;
+	padding: 0px 40px;
 	margin: auto;
 }
 .login_form .font{
@@ -97,4 +97,9 @@ nav {
 	background: green;
 	border: 1px solid greenyellow;
 	margin: auto;
+}
+
+#create_account_form {
+	padding-top: 0;
+	padding-bottom: 20px;
 }

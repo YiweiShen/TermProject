@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto Slab', serif;
 }
 
 header {
@@ -10,38 +8,6 @@ header {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-}
-
-nav {
-	background-color: rgb(56, 56, 56);
-}
-
-nav ul a {
-	text-decoration: none;
-}
-
-nav img {
-	display: inline-block;
-	width: 100px;
-	height: auto;
-	margin: auto 0 auto 5%;
-}
-
-nav ul {
-	position: absolute;
-	top: 20px;
-	left: 60%;
-	display: flex;
-	width: auto;
-	height: auto;
-}
-
-nav ul li {
-	list-style: none;
-	padding: 10px;
-	margin-left: 20px;
-	color: black;
-	font-weight: 400;
 }
 
 .page:hover{
@@ -53,11 +19,19 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+	margin-top: 100px;
 	
 }
 .table1 img {
+	margin: 2%;
 	height: 450px;
 	width: 700px;
+}
+
+#td_des {
+	margin: 5%;
+	padding: 5%;
+	float: right;
 }
 
 .footer tr td {
@@ -98,7 +72,7 @@ nav ul li {
 }
 
 .mainTable td {
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid black;
 	display: block;
 }
 
@@ -141,7 +115,6 @@ nav ul li {
 }
 
 body {
-	padding: 0 2em;
 	color: #444;
 	background: #eee;
 }
@@ -155,9 +128,8 @@ body table tr td img {
 }
 
 .mainTable {
-	/* padding: 0 2em; */
+	margin: 100px;
 	position: relative;
-	top: 100px;
 	background: #34495e;
 	color: #fff;
 	border-radius: 0.4em;
@@ -184,4 +156,25 @@ body table tr td img {
 
 .mainTable th, .mainTable td:before {
 	color: #dd5;
+}
+
+#lblCartCount {
+    font-size: 15px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
 }

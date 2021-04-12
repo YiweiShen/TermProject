@@ -35,8 +35,13 @@
 		</nav>
 	</header>
 	<!-- End header -->
+	<!-- widget from elfsight -->
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+	<div class="elfsight-app-c54a9f11-cc52-4e73-8784-3df05f22fda8"></div>
+	<div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
+
 	<div id='submit_form'>
-		<h1 id='submit_label'>User Login</h1>
+		<h1 id='login_label'>User Login</h1>
 		<form class="login_form" action="welcome.html" method="post" name="form" onsubmit="return validated()">
 			<div class="font">Email or Phone</div>
 			<input autocomplete="off" type="text" name="email">
@@ -47,7 +52,7 @@
 			<button type="submit">Login</button>
 			<hr>
 		</form>
-		<form class="login_form" action="register.html" method="post" name="form">
+		<form class="login_form" id="create_account_form" action="register.html" method="post" name="form">
 			<button type="submit" id="create_new_account">Create New Account</button>
 		</form>
 	</div>
@@ -106,6 +111,7 @@
 		
 	</footer>
 	<!-- End Footer -->
+
 	<script src="js/valid_login.js"></script>
 </body>
 </html>

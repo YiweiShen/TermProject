@@ -3,12 +3,78 @@
 .account-wrap {
 	margin-top: 150px;
 	margin-bottom: 100px;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 25%;
+	margin-left: 25%;
     text-align: center;
+	color: #444;
+	background: #eee;
+	padding: 2%;
 }
 
 nav {
 	top: 0;
 	position: fixed;
+}
+
+body {
+	background: url("../images/background_register.jpg");
+}
+
+.edit-button{
+	float: right;
+	margin: auto;
+	height: 2rem;
+	width: 3.5rem;
+	font-size: 15px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1A237E;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.edit-button:hover{
+	background: #151c6a;
+}
+
+#lblCartCount {
+    font-size: 15px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
+.badge {
+	padding-left: 9px;
+	padding-right: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+}
+  
+.label-warning[href],
+.badge-warning[href] {
+	background-color: #c67605;
+}
+
+.submit-button{
+	margin: auto;
+	height: 2rem;
+	width: 6rem;
+	font-size: 15px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1A237E;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.submit-button:hover{
+	background: #151c6a;
 }

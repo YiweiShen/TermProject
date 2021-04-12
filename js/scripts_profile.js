@@ -27,6 +27,7 @@ $(document).ready(function() {
         $("#edit-name").hide();
         $("#edit-button-name").show();
         // update name
+        $("#account-label-name").text($("#updated-name").val());
     });
 
     // edit and update user's nickname
@@ -39,6 +40,7 @@ $(document).ready(function() {
         $("#edit-nickname").hide();
         $("#edit-button-nickname").show();
         // update nickname
+        $("#account-label-nickname").text($("#updated-name").val());
     });
 
     // edit and update user's gender

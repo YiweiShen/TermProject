@@ -1,19 +1,118 @@
 /* Term project - Group 8 */
 
+
 nav {
 	top: 0;
 	position: fixed;
 }
 
+footer { 
+	position: fixed; 
+	bottom: 0;
+}
+
 .cart-wrap {
 	margin-top: 150px;
 	margin-bottom: 100px;
-	margin-right: auto;
-	margin-left: auto;
-    text-align: center;
+	margin-right: 20%;
+	margin-left: 20%;
+    text-align: left;
+	color: #444;
+	background: #eee;
+	padding: 2%;
 }
 
 .cart-wrap aside {
     float: right;
-    margin-right: 10%;
+    margin-right: 20%;
+}
+
+#lblCartCount {
+    font-size: 15px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
+.badge {
+	padding-left: 9px;
+	padding-right: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+	background-color: #c67605;
+  }
+
+  body{
+	background: url(../images/background_login.jpg) repeat;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	height: 100%;
+	position: relative;
+}
+
+.item_remove_button{
+	float: right;
+	margin: auto;
+	height: 2rem;
+	width: 6rem;
+	font-size: 15px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1A237E;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.item_remove_button:hover{
+	background: #151c6a;
+}
+
+.checkout_button{
+	float: right;
+	margin: auto;
+	height: 2rem;
+	width: 6rem;
+	font-size: 15px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1A237E;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.checkout_button:hover{
+	background: #151c6a;
+}
+
+.item img {
+	width: 15rem;
+	height: 10rem;
+}
+
+.item {
+	margin-bottom: 5rem;
+}
+
+.cart_details {
+	left: 0;
+}
+
+.summary_span {
+	float: right;
+}
+
+#order_summary {
+	margin-top: 2rem;
 }

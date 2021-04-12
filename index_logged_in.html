@@ -15,9 +15,6 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("#lblCartCount").hide();
-            $("#profile_link").hide();
-            $("#cart_link").hide();
-            $(".add").hide();
             $('.slideshow').cycle({
                 fx: 'scrollLeft'
             });
@@ -42,7 +39,7 @@
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index_logged_in.html">
 					<img src="./images/logo_details.png" class="logo">
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +47,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="index_logged_in.html">Home</a></li>
 						<li class="nav-item" id="profile_link"><a class="nav-link" href="profile.html">Profile</a></li>
                         <li class="nav-item" id="cart_link">
                             <a class="nav-link" href="cart.html">
@@ -58,7 +55,7 @@
                                 <span class='badge badge-warning' id='lblCartCount'> 0 </span>
                             </a>
                         </a></li>
-						<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+						<li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
 					</ul>
 				</div>
 			</div>
@@ -69,7 +66,7 @@
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-c54a9f11-cc52-4e73-8784-3df05f22fda8"></div>
     <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
-
+    
     <div class="slideshow">
         <img src="./images/1_details.jpg" height="500" />
         <img src="./images/2_details.jpg" height="500" />
@@ -429,6 +426,5 @@
 	</footer>
 	<!-- End Footer -->
 
-    
 </body>
 </html>
