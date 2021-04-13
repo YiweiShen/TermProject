@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Details</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/bootstrap.min.css">    
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="./css/tableStyle.css" type="text/css">
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $(".button1").click(function(){
-                    alert("Successfully added to the shopping cart");
-                    $("#lblCartCount").show();
-                    var count_num = +$("#lblCartCount").html()+1;
-                    $("#lblCartCount").html(count_num);
-                });
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./css/tableStyle.css" type="text/css">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".button1").click(function(){
+                alert("Successfully added to the shopping cart");
+                $("#lblCartCount").show();
+                var count_num = +$("#lblCartCount").html()+1;
+                $("#lblCartCount").html(count_num);
             });
-        </script>
-    </head>
+        });
+    </script>
+</head>
+
 <body>
-    
 	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -49,12 +49,14 @@
 		</nav>
 	</header>
 	<!-- End header -->
+
     <!-- widget from elfsight -->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
-    <br />
-    <br />
-    <br />
+
+    <br>
+
+    <!-- Start table of product image/name/price -->
     <table class="table1">
         <tr>
             <td><img src="./images/6_details.jpg" /></td>
@@ -63,7 +65,9 @@
                 <button class="button1" style="color:black; font-size: 30px; background-color: coral;">Add to Cart</button></td>
         </tr>
     </table>
+    <!-- End table of product image/name/price -->
     
+    <!-- Start table of product features -->
     <table class="mainTable">
         <tr>
             <th>Base Features</th>
@@ -125,14 +129,16 @@
             <td>Lithium-ion</td>
         </tr>
     </table>
+    <!-- End table of product features -->
+
 	<!-- Start Footer -->
 	<footer class="footer-area bg-f">
 		<div class="container">
 			<div class="row">
                 <div class="col-lg-3 col-md-6">
 					<h3>About Us</h3>
-					<p>We're dedicated to giving you the very best of Nikon camera,laptops, blueberry mobiles with a focus on three characteristics, ie: dependability, customer service and uniqueness.
-						Founded in 2021. </p>
+					<p>We're dedicated to giving you the very best of Nikon camera, laptops, blueberry mobiles with a focus on three characteristics, i.e. dependability, customer service and uniqueness.
+						Founded in 2021.</p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>
@@ -160,9 +166,9 @@
 				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
 					<p><span class="text-color">Monday: </span>Closed</p>
-					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+					<p><span class="text-color">Tue-Wed:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Thu-Fri:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Sat-Sun:</span> 5 PM - 10 PM</p>
 				</div>
 			</div>
 		</div>
@@ -176,7 +182,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</footer>
 	<!-- End Footer -->
 

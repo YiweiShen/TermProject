@@ -2,18 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Validated Login Form</title>
+	<title>Login</title>
 	<link rel="stylesheet" href="css/style_login.css">
-	    <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">    
-		<!-- Site CSS -->
-		<link rel="stylesheet" href="css/style.css">    
-		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="css/responsive.css">
-	
-
+	<link rel="stylesheet" href="css/bootstrap.min.css">    
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 	<!-- Start header -->
 	<header class="top-navbar">
@@ -35,11 +29,13 @@
 		</nav>
 	</header>
 	<!-- End header -->
+
 	<!-- widget from elfsight -->
 	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
 	<div class="elfsight-app-c54a9f11-cc52-4e73-8784-3df05f22fda8"></div>
 	<div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
 
+	<!-- Start login form -->
 	<div id='submit_form'>
 		<h1 id='login_label'>User Login</h1>
 		<form class="login_form" action="welcome.html" method="post" name="form" onsubmit="return validated()">
@@ -56,6 +52,7 @@
 			<button type="submit" id="create_new_account">Create New Account</button>
 		</form>
 	</div>
+	<!-- End login form -->
 		
 	<!-- Start Footer -->
 	<footer class="footer-area bg-f">
@@ -63,8 +60,8 @@
 			<div class="row">
                 <div class="col-lg-3 col-md-6">
 					<h3>About Us</h3>
-					<p>We're dedicated to giving you the very best of Nikon camera,laptops, blueberry mobiles with a focus on three characteristics, ie: dependability, customer service and uniqueness.
-						Founded in 2021. </p>
+					<p>We're dedicated to giving you the very best of Nikon camera, laptops, blueberry mobiles with a focus on three characteristics, i.e. dependability, customer service and uniqueness.
+						Founded in 2021.</p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>
@@ -92,9 +89,9 @@
 				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
 					<p><span class="text-color">Monday: </span>Closed</p>
-					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+					<p><span class="text-color">Tue-Wed:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Thu-Fri:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Sat-Sun:</span> 5 PM - 10 PM</p>
 				</div>
 			</div>
 		</div>
@@ -108,10 +105,10 @@
 				</div>
 			</div>
 		</div>
-		
 	</footer>
 	<!-- End Footer -->
 
+	<!-- input validation -->
 	<script src="js/valid_login.js"></script>
 </body>
 </html>

@@ -4,15 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Hover Placeholder With Validation</title>
+	<title>Register</title>
    <link rel="stylesheet" href="css/bootstrap.min.css">    
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/style_register.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+   <script src="js/scripts_reg.js"></script>
 </head>
 <body>
-   	<!-- Start header -->
+   <!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 				<div class="container">
@@ -32,12 +33,14 @@
 		</nav>
 	</header>
 	<!-- End header -->
-    <!-- widget from elfsight -->
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
+   
+   <!-- widget from elfsight -->
+   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
     
+   <!-- Start Registration Form -->
 	<div class="container_reg">
-		<h1>New User Register</h1>
+		<h1 id="reg_label">New User Register</h1>
 		<form id="registration_form" action="welcome.html">
 			<div>
 				<input type="text" id="form_fname" name="" required="">
@@ -56,7 +59,7 @@
 			<div>
 				<input type="email" id="form_email" name="" required="">
 				<span class="error_form" id="email_error_message"></span>
-				<label>Email id</label>	
+				<label>Email Address</label>	
 			</div>
 			<div>
 				<input type="password" id="form_password" name="" required="">
@@ -71,187 +74,61 @@
 			<input type="submit" value="Register" name="">
 		</form>
 	</div>
-	
+	<!-- End Registration Form -->
 
-	<script type="text/javascript">
-      $(function() {
-
-         $("#fname_error_message").hide();
-         $("#sname_error_message").hide();
-         $("#email_error_message").hide();
-         $("#password_error_message").hide();
-         $("#retype_password_error_message").hide();
-
-         var error_fname = false;
-         var error_sname = false;
-         var error_email = false;
-         var error_password = false;
-         var error_retype_password = false;
-
-         $("#form_fname").focusout(function(){
-            check_fname();
-         });
-         $("#form_sname").focusout(function() {
-            check_sname();
-         });
-         $("#form_email").focusout(function() {
-            check_email();
-         });
-         $("#form_password").focusout(function() {
-            check_password();
-         });
-         $("#form_retype_password").focusout(function() {
-            check_retype_password();
-         });
-
-         function check_fname() {
-            var pattern = /^[a-zA-Z]*$/;
-            var fname = $("#form_fname").val();
-            if (pattern.test(fname) && fname !== '') {
-               $("#fname_error_message").hide();
-               $("#form_fname").css("border-bottom","2px solid #34F458");
-            } else {
-               $("#fname_error_message").html("Should contain only Characters");
-               $("#fname_error_message").show();
-               $("#form_fname").css("border-bottom","2px solid #F90A0A");
-               error_fname = true;
-            }
-         }
-
-         function check_sname() {
-            var pattern = /^[a-zA-Z]*$/;
-            var sname = $("#form_sname").val()
-            if (pattern.test(sname) && sname !== '') {
-               $("#sname_error_message").hide();
-               $("#form_sname").css("border-bottom","2px solid #34F458");
-            } else {
-               $("#sname_error_message").html("Should contain only Characters");
-               $("#sname_error_message").show();
-               $("#form_sname").css("border-bottom","2px solid #F90A0A");
-               error_fname = true;
-            }
-         }
-
-         function check_password() {
-            var password_length = $("#form_password").val().length;
-            if (password_length < 8) {
-               $("#password_error_message").html("Atleast 8 Characters");
-               $("#password_error_message").show();
-               $("#form_password").css("border-bottom","2px solid #F90A0A");
-               error_password = true;
-            } else {
-               $("#password_error_message").hide();
-               $("#form_password").css("border-bottom","2px solid #34F458");
-            }
-         }
-
-         function check_retype_password() {
-            var password = $("#form_password").val();
-            var retype_password = $("#form_retype_password").val();
-            if (password !== retype_password) {
-               $("#retype_password_error_message").html("Passwords Did not Matched");
-               $("#retype_password_error_message").show();
-               $("#form_retype_password").css("border-bottom","2px solid #F90A0A");
-               error_retype_password = true;
-            } else {
-               $("#retype_password_error_message").hide();
-               $("#form_retype_password").css("border-bottom","2px solid #34F458");
-            }
-         }
-
-         function check_email() {
-            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            var email = $("#form_email").val();
-            if (pattern.test(email) && email !== '') {
-               $("#email_error_message").hide();
-               $("#form_email").css("border-bottom","2px solid #34F458");
-            } else {
-               $("#email_error_message").html("Invalid Email");
-               $("#email_error_message").show();
-               $("#form_email").css("border-bottom","2px solid #F90A0A");
-               error_email = true;
-            }
-         }
-
-         $("#registration_form").submit(function() {
-            error_fname = false;
-            error_sname = false;
-            error_email = false;
-            error_password = false;
-            error_retype_password = false;
-
-            check_fname();
-            check_sname();
-            check_email();
-            check_password();
-            check_retype_password();
-
-            if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_retype_password === false) {
-               alert("Registration Successfull");
-               return true;
-            } else {
-               alert("Please Fill the form Correctly");
-               return false;
-            }
-
-
-         });
-      });
-   </script>
-<!-- Start Footer -->
-<footer class="footer-area bg-f">
-   <div class="container">
-      <div class="row">
-             <div class="col-lg-3 col-md-6">
-            <h3>About Us</h3>
-            <p>We're dedicated to giving you the very best of Nikon camera,laptops, blueberry mobiles with a focus on three characteristics, ie: dependability, customer service and uniqueness.
-               Founded in 2021. </p>
-         </div>
-         <div class="col-lg-3 col-md-6">
-            <h3>Subscribe</h3>
-            <div class="subscribe_form">
-               <form class="subscribe_form">
-                  <input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
-                  <button type="submit" class="submit">SUBSCRIBE</button>
-                  <div class="clearfix"></div>
-               </form>
-            </div>
-            <ul class="list-inline f-social">
-               <li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-               <li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-         </div>
-         <div class="col-lg-3 col-md-6">
-            <h3>Contact information</h3>
-            <p class="lead">Bay Street Toronto, Ontario M5J 2W7</p>
-            <p class="lead"><a href="#">+1 123-456-7890</a></p>
-            <p><a href="#"> info@bestchoices.com</a></p>
-         </div>
-         <div class="col-lg-3 col-md-6">
-            <h3>Opening hours</h3>
-            <p><span class="text-color">Monday: </span>Closed</p>
-            <p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-            <p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-            <p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
-         </div>
-      </div>
-   </div>
-   
-   <div class="copyright">
+   <!-- Start Footer -->
+   <footer class="footer-area bg-f">
       <div class="container">
          <div class="row">
-            <div class="col-lg-12">
-               <p class="company-name">All Rights Reserved. &copy; 2021 <a href="#"> by Best Choices</a></p>
+               <div class="col-lg-3 col-md-6">
+               <h3>About Us</h3>
+               <p>We're dedicated to giving you the very best of Nikon camera, laptops, blueberry mobiles with a focus on three characteristics, i.e. dependability, customer service and uniqueness.
+                  Founded in 2021.</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <h3>Subscribe</h3>
+               <div class="subscribe_form">
+                  <form class="subscribe_form">
+                     <input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
+                     <button type="submit" class="submit">SUBSCRIBE</button>
+                     <div class="clearfix"></div>
+                  </form>
+               </div>
+               <ul class="list-inline f-social">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+               </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <h3>Contact information</h3>
+               <p class="lead">Bay Street Toronto, Ontario M5J 2W7</p>
+               <p class="lead"><a href="#">+1 123-456-7890</a></p>
+               <p><a href="#"> info@bestchoices.com</a></p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <h3>Opening hours</h3>
+               <p><span class="text-color">Monday: </span>Closed</p>
+               <p><span class="text-color">Tue-Wed:</span> 9 Am - 10 PM</p>
+               <p><span class="text-color">Thu-Fri:</span> 9 Am - 10 PM</p>
+               <p><span class="text-color">Sat-Sun:</span> 5 PM - 10 PM</p>
             </div>
          </div>
       </div>
-   </div>
-   
-</footer>
-<!-- End Footer -->
+      
+      <div class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <p class="company-name">All Rights Reserved. &copy; 2021 <a href="#"> by Best Choices</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- End Footer -->
 
 </body>
 </html>

@@ -7,7 +7,7 @@ nav {
 	position: fixed;
 }
 .container_reg
-{  	margin-top: 400px;
+{  	margin-top: 450px;
 	margin-left: auto;
 	width: 50%;
 	transform: translate(-50%,-50%);
@@ -38,9 +38,12 @@ nav {
 }
 .container_reg input[type="submit"]
 {
-	border-radius: 15px;
 	font-size: 20px;
-	height: 40px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	height: 45px;
 	cursor : pointer;
 	background: green;
 	color: #fff;
@@ -82,4 +85,11 @@ nav {
 	color: rgb(216, 15, 15);
     font-size: 15px;
     font-family: Helvetica;
+}
+
+#reg_label {
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #130f40;
 }
