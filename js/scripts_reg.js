@@ -39,6 +39,7 @@ $(function() {
          $("#fname_error_message").show();
          $("#form_fname").css("border-bottom","2px solid #F90A0A");
          error_fname = true;
+         
       }
    }
 
