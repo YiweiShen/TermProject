@@ -16,12 +16,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body>
 
-    
+<body>
 	<!-- Start header -->
 	<header class="top-navbar">
-        
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 				<div class="container">
 					<a class="navbar-brand" href="index_logged_in.html">
@@ -47,9 +45,12 @@
 		</nav>
 	</header>
 	<!-- End header -->
+
     <!-- widget from elfsight -->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-a10f9f99-37d6-40c9-8b2f-97c284256ff8"></div>
+
+    <!-- Start Account Wrap -->
     <div class="account-wrap">
         <!-- Display user's information -->
         <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
@@ -58,19 +59,18 @@
         <div data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="1500">
             <h3>Account Information</h3>
         
-
         <!-- An edit button is included for each line for allowing user to update their information -->
         <!-- User's Avatar -->
         <div id="account-avatar" class="row-wrap">
             <div class="thumb">
                 <label class="account-label">Avatar: </label>
                 <img src="./images/avatar_sample.jpg" alt="Account Avatar" width="100">
+                <button class="edit-button" id="edit-button-avatar">Edit</button>
                 <div class="account-edit-input" id="edit-avatar">
                     <input type="file" name="fileToUpload", accept="image/*">
                     <button class="submit-button" id="submit-button-avatar">Submit</button>
                 </div>
             </div>
-            <button class="edit-button" id="edit-button-avatar">Edit</button>
         </div>
 
         <hr>
@@ -106,8 +106,8 @@
             <label class="account-label" id="account-label-gender">Male</label>
             <div class="account-edit-input" id="edit-gender">
                 <p><strong>Note:</strong> Please choose your gender.</p>
-                <label for=""> Male  </label><input type="radio" name="gender" value="male">
-                <label for=""> Female  </label><input type="radio" name="gender" value="female">
+                <label for="">Male</label><span>   </span><input type="radio" id="radio_male" name="gender" value="male" checked><br>
+                <label for="">Female</label><span>   </span><input type="radio" id="radio_female" name="gender" value="female"><br>
                 <button class="submit-button" id="submit-button-gender">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-gender">Edit</button>
@@ -156,13 +156,15 @@
         <div id="account-password" class="row-wrap">
             <label class="account-label">Password: </label>
             <label class="account-label" id="account-label-password">Password123456</label>
+            <label class="account-label" id="account-label-fake-password">********</label>
             <div class="account-edit-input" id="edit-password">
                 <label for="password">Update your password: </label>
                 <input type="password" name="password-input" id="password-input" required>
                 <button class="submit-button" id="submit-button-password">Submit</button>
             </div>
             <button class="edit-button" id="edit-button-password">Edit</button>
-            <button class="edit-button" id="show-hide-password">Show</button>
+            <button class="edit-button" id="show-password">Show</button>
+            <button class="edit-button" id="hide-password">Hide</button>
         </div>
         
         <hr>
@@ -197,8 +199,8 @@
             <label class="account-label">Privacy choice: </label>
             <label class="account-label" id="account-label-privacy-choice">Can be viewed by others.</label>
             <div class="account-edit-input" id="edit-privacy-choice">
-                <input type="radio" name="if-can-be-viewed" value="can"> Can be viewed by others.<br>
-                <input type="radio" name="if-can-be-viewed" value="cannot"> Hidden from others.<br>  
+                <input type="radio" id="can-be-viewed" name="if-can-be-viewed" value="can" checked> Can be viewed by others.<br>
+                <input type="radio" id="cannot-be-viewed" name="if-can-be-viewed" value="cannot"> Hidden from others.<br>  
                 <p><strong>Note:</strong> Please choose your privacy choice for your profile.</p>
                 <button class="submit-button" id="submit-button-privacy-choice">Submit</button>
             </div>
@@ -206,6 +208,7 @@
         </div>
     </div>
     </div>
+    <!-- End Account Wrap -->
 
 	<!-- Start Footer -->
 	<footer class="footer-area bg-f">
@@ -213,8 +216,8 @@
 			<div class="row">
                 <div class="col-lg-3 col-md-6">
 					<h3>About Us</h3>
-					<p>We're dedicated to giving you the very best of Nikon camera,laptops, blueberry mobiles with a focus on three characteristics, ie: dependability, customer service and uniqueness.
-						Founded in 2021. </p>
+					<p>We're dedicated to giving you the very best of Nikon camera, laptops, blueberry mobiles with a focus on three characteristics, i.e. dependability, customer service and uniqueness.
+						Founded in 2021.</p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>
@@ -242,9 +245,9 @@
 				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
 					<p><span class="text-color">Monday: </span>Closed</p>
-					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+					<p><span class="text-color">Tue-Wed:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Thu-Fri:</span> 9 Am - 10 PM</p>
+					<p><span class="text-color">Sat-Sun:</span> 5 PM - 10 PM</p>
 				</div>
 			</div>
 		</div>
@@ -258,9 +261,10 @@
 				</div>
 			</div>
 		</div>
-		
 	</footer>
 	<!-- End Footer -->
+
+    <!-- Init of AOS Plugin -->
     <script>
         AOS.init({
             offset: 100,
